@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-courses',
@@ -6,10 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent implements OnInit {
-  // CHALLENGE
-  // STEP 01: Update the form to show percentComplete
-  // STEP 02: Updaet the form to show favorite
-
   selectedCourse = null;
 
   courses = [
@@ -23,43 +19,42 @@ export class CoursesComponent implements OnInit {
     {
       id: 2,
       title: 'JavaScript The Really REALLY HARD PARTS',
-      description: 'Worship Will Sentance',
+      description: 'Worship Will',
       percentComplete: 50,
       favorite: true
     }
   ];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.resetSelectedCourse();
   }
 
-  resetSelectedCourse() {
-    const emptyCourse = {
+  resetSelectedCourse(): any {
+    this.selectedCourse = {
       id: null,
       title: '',
       description: '',
       percentComplete: 0,
       favorite: false
     };
-
-    this.selectedCourse = emptyCourse;
   }
 
-  selectCourse(course) {
+  selectCourse(course): any {
     this.selectedCourse = course;
   }
 
-  saveCourse() {
+  saveCourse(): any {
     console.log('SAVE SOURCE!');
   }
 
-  deleteCourse(courseId) {
+  deleteCourse(courseId): void {
     console.log('COURSE DELETED!', courseId);
   }
 
-  cancel() {
+  cancel(): void {
     this.resetSelectedCourse();
   }
 }
