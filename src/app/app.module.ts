@@ -12,12 +12,21 @@ import { FormsModule } from '@angular/forms';
 import { AppFirebaseModule } from './app-firebase.module';
 import {AppMaterialModule} from './app-material.module';
 
+import { CreateComponent } from './components/create/create.component';
+import { FeedComponent } from './components/feed/feed.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CoursesComponent
+    CoursesComponent,
+    CreateComponent,
+    FeedComponent,
+    HeaderComponent,
+    ProfileCardComponent,
   ],
   imports: [
     BrowserModule,
