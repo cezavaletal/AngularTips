@@ -5,10 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MaterialModule} from './material.module';
 import { HomeComponent } from './home/home.component';
-import { CoursesComponent } from './courses/courses.component'
+import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
+
+import { AppFirebaseModule } from './app-firebase.module';
+import {AppMaterialModule} from './app-material.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,11 +21,12 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    MaterialModule,
+    AppMaterialModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppFirebaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
