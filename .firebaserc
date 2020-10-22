@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "proyectocaramelo-1e257": {
+      "hosting": {
+        "event": [
+          "proyectocaramelo-1e257"
+        ]
+      }
+    }
+  }
+}
